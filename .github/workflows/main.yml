@@ -44,7 +44,7 @@ jobs:
           # The 'to' address will receive the email. If your SES account is in sandbox, 'to' must also be verified.
           aws ses send-email \
             --from 'arnavrr0@gmail.com' \
-            --destination 'najlababu99@gmail.com' \
+            --destination 'ToAddresses="najlababu99@gmail.com"' \
             --message 'Subject={Data="✅ Build Success - ${{ github.repository }}"},Body={Text={Data="Build for ${{ github.repository }} on branch `${{ github.ref_name}}` was successful!\n\nCommit: `${{ github.sha}}`\nWorkflow Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"}}' \
             --region us-east-1 # Ensure this matches your aws-region above
 
